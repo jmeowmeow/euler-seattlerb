@@ -5,7 +5,8 @@
 
 int sumBelow1000(int factor) {
   int sum = 0;
-  for (int multiple = factor; multiple < 1000; multiple += factor) {
+  int multiple;
+  for (multiple = factor; multiple < 1000; multiple += factor) {
     sum += multiple;
   }
   return sum;
@@ -19,5 +20,5 @@ int main(int argc, char **argv) {
   
   sum = sum + sumBelow1000(3) + sumBelow1000(5) - sumBelow1000(15);
   
-  printf("The sum of all numbers below 1000 which are multiples of 3 or 5 is: %d.", sum);
+  printf("The sum of all numbers below 1000 which are multiples of 3 or 5 is: %d.\n", sum);
 }
